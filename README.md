@@ -1,0 +1,2 @@
+# CollegeAttendanceManagementSystem
+基于JavaFX以及ArcSoft的高校学生考勤管理系统
