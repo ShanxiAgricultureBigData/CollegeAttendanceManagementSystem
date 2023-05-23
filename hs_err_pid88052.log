@@ -1,0 +1,178 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=88052, tid=0x0000000000016ee8
+#
+# JRE version:  (8.0_361) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.361-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000024dedac1000):  JavaThread "Unknown thread" [_thread_in_vm, id=93928, stack(0x000000db98300000,0x000000db98400000)]
+
+Stack: [0x000000db98300000,0x000000db98400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3317a9]
+V  [jvm.dll+0x277c4e]
+V  [jvm.dll+0x27888d]
+V  [jvm.dll+0x26f0d5]
+V  [jvm.dll+0x509d]
+V  [jvm.dll+0x3d5e83]
+V  [jvm.dll+0x3d6898]
+V  [jvm.dll+0xfd0df]
+V  [jvm.dll+0x20c29b]
+V  [jvm.dll+0x23adc7]
+V  [jvm.dll+0x1637b6]
+C  [java.exe+0x2312]
+C  [java.exe+0x15f54]
+C  [KERNEL32.DLL+0x15590]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000024dedac1000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=93928, stack(0x000000db98300000,0x000000db98400000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006e2200000, size: 3550 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 66560K, used 1146K [0x0000000776100000, 0x000000077ab00000, 0x00000007c0000000)
+  eden space 57344K, 2% used [0x0000000776100000,0x000000077621eb90,0x0000000779900000)
+  from space 9216K, 0% used [0x000000077a200000,0x000000077a200000,0x000000077ab00000)
+  to   space 9216K, 0% used [0x0000000779900000,0x0000000779900000,0x000000077a200000)
+ ParOldGen       total 151552K, used 0K [0x00000006e2200000, 0x00000006eb600000, 0x0000000776100000)
+  object space 151552K, 0% used [0x00000006e2200000,0x00000006e2200000,0x00000006eb600000)
+ Metaspace       used 775K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000024dfe940000,0x0000024dff030000] byte_map_base: 0x0000024dfb22f000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000062a9b090
+ Begin Bits: [0x0000024d80000000, 0x0000024d83778000)
+ End Bits:   [0x0000024d83778000, 0x0000024d86ef0000)
+
+Polling page: 0x0000024dedd60000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000024def580000, 0x0000024def7f0000, 0x0000024dfe580000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.021 loading class java/lang/Short
+Event: 0.021 loading class java/lang/Short done
+Event: 0.021 loading class java/lang/Integer
+Event: 0.021 loading class java/lang/Integer done
+Event: 0.021 loading class java/lang/Long
+Event: 0.021 loading class java/lang/Long done
+Event: 0.022 loading class java/lang/NullPointerException
+Event: 0.022 loading class java/lang/NullPointerException done
+Event: 0.022 loading class java/lang/ArithmeticException
+Event: 0.022 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff6951a0000 - 0x00007ff6951e7000 	D:\Kettle\data-integration\JDK1.8\jre\bin\java.exe
+0x00007ffd04780000 - 0x00007ffd04989000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd02b40000 - 0x00007ffd02bfe000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd01eb0000 - 0x00007ffd02233000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd025f0000 - 0x00007ffd0269e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd03980000 - 0x00007ffd03a23000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd03a30000 - 0x00007ffd03ace000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd033e0000 - 0x00007ffd03501000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd03510000 - 0x00007ffd036bd000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd01e80000 - 0x00007ffd01ea6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd03de0000 - 0x00007ffd03e09000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd022c0000 - 0x00007ffd023da000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd023e0000 - 0x00007ffd0247d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd01c30000 - 0x00007ffd01d41000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffce70f0000 - 0x00007ffce7395000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ffd02c70000 - 0x00007ffd02ca1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffcf4330000 - 0x00007ffcf4345000 	D:\Kettle\data-integration\JDK1.8\jre\bin\vcruntime140.dll
+0x00007ffcf1f70000 - 0x00007ffcf200b000 	D:\Kettle\data-integration\JDK1.8\jre\bin\msvcp140.dll
+0x00000000622b0000 - 0x0000000062b13000 	D:\Kettle\data-integration\JDK1.8\jre\bin\server\jvm.dll
+0x00007ffd02b10000 - 0x00007ffd02b18000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffcf9b80000 - 0x00007ffcf9b8a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffcff860000 - 0x00007ffcff893000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffcf3cb0000 - 0x00007ffcf3cb9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd046d0000 - 0x00007ffd0473f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd00cb0000 - 0x00007ffd00cc8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffcfdc40000 - 0x00007ffcfdc50000 	D:\Kettle\data-integration\JDK1.8\jre\bin\verify.dll
+0x00007ffcf3c00000 - 0x00007ffcf3c2b000 	D:\Kettle\data-integration\JDK1.8\jre\bin\java.dll
+0x00007ffcf42a0000 - 0x00007ffcf42b8000 	D:\Kettle\data-integration\JDK1.8\jre\bin\zip.dll
+0x00007ffcff470000 - 0x00007ffcff691000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffd02240000 - 0x00007ffd022bf000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+java_command: org.bridj.Platform$DeleteFiles C:\Users\¡ı—Â∫Ï\AppData\Local\Temp\BridJExtractedLibraries7813173707037900626\bridj.dll C:\Users\¡ı—Â∫Ï\AppData\Local\Temp\BridJExtractedLibraries7813173707037900626 C:\Users\¡ı—Â∫Ï\AppData\Local\Temp\BridJExtractedLibraries7813173707037900626\OpenIMAJGrabber.dll
+java_class_path (initial): D:\Kettle\data-integration\JDK1.8\jre\lib\charsets.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\deploy.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\access-bridge-64.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\cldrdata.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\dnsns.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\jaccess.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\jfxrt.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\localedata.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\nashorn.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\sunec.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\sunjce_provider.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\sunmscapi.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\sunpkcs11.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\ext\zipfs.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\javaws.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\jce.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\jfr.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\jfxswt.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\jsse.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\management-agent.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\plugin.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\resources.jar;D:\Kettle\data-integration\JDK1.8\jre\lib\rt.jar;D:\IdeaProjects\CollegeAttendanceManagementSystem\target\classes;D:\∫Á»ÌV3.0\libs\arcsoft-sdk-face-3.0.0.0.jar;D:\Maven\repository\org\jfree\jfreechart\1.5.3\jfreechart-1.5.3.jar;D:\Maven\repository\org\jfree\jfreechart-fx\1.0.0\jfreechart-fx-1.0.0.jar;D:\Maven\repository\org\jfree\fxgraphics2d\1.6\fxgraphics2d-1.6.jar;D:\Maven\repository\org\xerial\sqlite-jdbc\3.41.2.1\sqlite-jdbc-3.41.2.1.jar;D:\Maven\repository\com\github\sarxos\webcam-capture\0.3.12\webcam-capture-0.3.12.jar;D:\Maven\repository\com\nativelibs4java\bridj\0.7.0\bridj-0.7.0.jar;D:\Maven\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;D:\Maven\repository\org\swing\beautyeye\3.6\3.6\3.6-3.
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\java
+CLASSPATH=.;C:\Program Files\Tomcat\apache-tomcat-9.0.65\lib\servlet-api.jar;;".;C:\Program Files (x86)\MysqlJDBC\mysql-connector-j-8.0.31\mysql-connector-j-8.0.31\mysql-connector-j-8.0.31.jar";
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;D:\VM\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\java;C:\Program Files\MySQL\MySQL Server 8.0\bin\;C:\Program Files\Tomcat\apache-tomcat-9.0.65\bin;D:\Xshell7\;D:\Xftp\XftpœµÕ≥Œƒº˛\;%MA;EN_HOME%\bin;D:\–¬Ω®Œƒº˛º–\Œ¢–≈webø™∑¢’ﬂπ§æﬂ\dll;D:\Git\Git\cmd;D:\PanDoc\;D:\java\bin;D:\hadoop3.3.0\hadoop-3.3.0\bin;C:\Users\¡ı—Â∫Ï\AppData\Local\MyChrome\Chrome\Application;D:\Java\javafx17\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\¡ı—Â∫Ï\AppData\Local\Microsoft\WindowsApps;D:\Jet-Brain\Pycharm2021.3\PyCharm 2021.3.2\bin;;D:\Java\javafx17\openjfx-17.0.2_windows-x64_bin-sdk\javafx-sdk-17.0.2\bin;D:\\Sqlite;
+USERNAME=¡ı—Â∫Ï
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22000 (10.0.22000.1761)
+
+CPU:total 16 (initial active 16) (16 cores per cpu, 1 threads per core) family 23 model 104 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 14538488k(370120k free), swap 40752884k(5764k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.361-b09) for windows-amd64 JRE (1.8.0_361-b09), built on Jan  9 2023 08:38:53 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Tue May  2 14:42:09 2023
+timezone: AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+elapsed time: 0.052196 seconds (0d 0h 0m 0s)
+

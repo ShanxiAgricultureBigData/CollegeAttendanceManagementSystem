@@ -1,0 +1,15 @@
+/*treeItem样式*/
+.tree-cell {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 5;
+}
+/*treeView样式*/
+.my-tree-view{
+    -fx-padding: 5;
+}
+
+.alert{
+    -fx-pref-width: 150px;
+    -fx-pref-height: 100px;
+}

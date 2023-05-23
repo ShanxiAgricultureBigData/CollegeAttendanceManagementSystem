@@ -1,0 +1,30 @@
+.root{
+    -fx-background-image: url(sxaubg.jpg);
+}
+/*字体大小、填充、粗细和标签效果*/
+.label {
+    -fx-font-family: "Candara Light";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,255) , 0,0,0,1 );
+}
+/*设置文本样式*/
+#welcome-text {
+    -fx-font-size: 32px;
+    -fx-font-family: "Candara Light";
+    -fx-fill: white;
+    -fx-effect: dropshadow(three-pass-box, #72b9da, 10.0,0, 0, 0);
+    -fx-cursor: hand;
+}
+/*设置按钮样式 阴影*/
+.button {
+    -fx-background-color: deepskyblue;
+    -fx-text-fill: white;
+}
+
+/*alert样式*/
+.alert {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 100px;
+}

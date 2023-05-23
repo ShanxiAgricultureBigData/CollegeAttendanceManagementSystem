@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts Demo</title>
+    <!-- 引入ECharts库 -->
+<!--    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.0/dist/echarts.min.js"></script>-->
+    <script src="echarts.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.js"></script>-->
+
+
+    <!-- 引入 Echarts 的 JavaScript 文件 -->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>-->
+    <!--    <script src="/echarts.min.js"></script>-->
+    <!-- 引入 echarts 的样式文件 -->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.css">-->
+    <!--    <script src="echarts.min.js"></script>-->
+</head>
+<body>
+<!-- 折线图容器 -->
+<div id="lineChart" style="width: 800px; height: 600px;"></div>
+<script>
+    // 折线图数据
+    var lineData = {
+        categories: ['4-28', '4-30', '5-01','5-04', '5-05','5-06'],
+        data: [1, 11, 3, 6 , 8, 2]
+    };
+    // 折线图配置
+    var lineOption = {
+        title: {
+            text: '考人数勤波动'
+        },
+        xAxis: {
+            type: 'category',
+            data: lineData.categories
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            type: 'line',
+            data: lineData.data
+        }]
+    };
+    // 创建折线图实例
+    var lineChart = echarts.init(document.getElementById('lineChart'), null, {renderer: 'svg'});
+    // 使用配置项显示折线图
+    lineChart.setOption(lineOption);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts Demo</title>
+    <!-- 引入ECharts库 -->
+<!--    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.0/dist/echarts.min.js"></script>-->
+    <script src="echarts.min.js"></script>
+
+    <!-- 引入 Echarts 的 JavaScript 文件 -->
+<!--    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>-->
+<!--    <script src="/echarts.min.js"></script>-->
+    <!-- 引入 echarts 的样式文件 -->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.css">-->
+<!--    <script src="echarts.min.js"></script>-->
+</head>
+<body>
+<!-- 饼状图容器 -->
+<div id="pieChart" style="width: 800px; height: 600px;"></div>
+<script>
+    // 饼状图数据
+    var pieData = [
+        {value: 1, name: '请假(1)'},
+        {value: 32, name: '缺勤(32)'},
+        {value: 1, name: '已到(1)'}
+    ];
+    // 饼状图配置
+    var pieOption = {
+        title: {
+            text: '考勤状态'
+        },
+        series: [{
+            type: 'pie',
+            data: pieData
+        }]
+    };
+    // 创建饼状图实例
+    var pieChart = echarts.init(document.getElementById('pieChart'),null,{renderer: 'svg'});
+    // 使用配置项显示饼状图
+    pieChart.setOption(pieOption);
+</script>
+</body>
+</html>
