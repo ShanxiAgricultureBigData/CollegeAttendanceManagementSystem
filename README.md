@@ -7,16 +7,21 @@
 
 ## 开源代码与组件的使用情况
 
-本作品使用的是开源语言Java（JDK1.8）以及一些开源代码库，比如开源图表框架Echarts、Apache Poi、junit、slf4j以及虹软srcsoft-sdk-face-3.0.0（已获得虹软官方的激活码以及使用许可）。
+本作品使用的是开源语言Java（JDK1.8）以及一些开源代码库，比如开源图表框架Echarts、Apache Poi、junit、slf4j以及虹软srcsoft-sdk-face-3.0.0（需要获得虹软官方的激活码）。
+
+## 软件结构
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/b9533cbc-510a-439c-8fef-649f35959022)
+
 
 ## 作品效果图
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/82e0c52f-16aa-4bfc-a367-6921cefd9f5d)
 
-![img](https://2023.jsjds.com.cn/Backend/Work/work/download-article-picture?name=20230462441683276357RHiqUDWhiTjMAUNzXyBSXLiPwNJqzZ.png)
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/7eca84e2-b185-44c5-9695-a39dc8d3ba57)
 
-![image-20230621105515949](C:\Users\刘彦红\AppData\Roaming\Typora\typora-user-images\image-20230621105515949.png)
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/d443c01e-7b32-418b-9cc8-eda80ec19eab)
 
-![img](https://2023.jsjds.com.cn/Backend/Work/work/download-article-picture?name=20230462441683382239voq432foaPIp_8vsd__I4Z3MNXjFYw.png)
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/226acf02-e49e-47d4-99c4-a117e6c21815)
 
-![img](https://2023.jsjds.com.cn/Backend/Work/work/download-article-picture?name=20230462441683277675p3Zqu_rIEZOeiPNve06aCte3XNEpM8.png)
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/5c02d04f-847e-4ed8-a754-658212bc1e71)
 
-![img](https://2023.jsjds.com.cn/Backend/Work/work/download-article-picture?name=20230462441683277700CBJjwcWNcDQpWtOuOyE736Se8xk2RJ.png)
+![image](https://github.com/LoneRanger1029/CollegeAttendanceManagementSystem/assets/107778802/985d3644-d3ca-47ce-8a43-e73e5382b3d9)
